@@ -14,7 +14,7 @@ int _printf(const char *format, ...);
 void fill(char ch);
 int handle_char(char ch);
 int handle_string(char *str);
-int string_null(void);
+void string_null(void);
 int handle_percentage(void);
 int number_of_digits(int num);
 int handle_integer(va_list inf);

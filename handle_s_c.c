@@ -17,7 +17,7 @@ int handle_char(char ch)
  * 
  * Return: nothing
  */
-int string_null(void)
+void string_null(void)
 {
 	int i;
 	char *str = "(null)";
@@ -27,8 +27,6 @@ int string_null(void)
 	{
 		fill(str[i]);
 	}
-
-	return (len);
 }
 
 
@@ -45,7 +43,7 @@ int handle_string(char *str)
 	len = strlen(str);
 
 	if (str == NULL)
-		return;
+		return (6);
 
 	while(*str)
 	{
