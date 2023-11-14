@@ -43,7 +43,10 @@ int handle_string(char *str)
 	len = strlen(str);
 
 	if (str == NULL)
+	{
+		string_null();
 		return (6);
+	}
 
 	while(*str)
 	{
