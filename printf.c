@@ -94,7 +94,7 @@ int _printf(const char *format, ...)
 	int flag = 0;
 	int count = 0;
 
-	if (format == NULL || (format == '%' && format == '\0'))
+	if (format == NULL || (formait[i] == '%' && format[i + 1] == '\0'))
 		return (-1);
 
 	va_start(inf, format);
