@@ -1,4 +1,7 @@
 #include <limits.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <stdio.h>
 #include "main.h"
 
@@ -9,7 +12,7 @@
  */
 int main(void)
 {
-	_printf(NULL);
-	printf(NULL);
+	_printf("");
+	printf("");
 	return (0);
 }

@@ -41,10 +41,9 @@ int handle_string(char *str)
 
 	len = strlen(str);
 
-	if (str == NULL)
+	if (len == 0)
 	{
-		string_null();
-		return (6);
+		return (-1);
 	}
 
 	while (*str)
