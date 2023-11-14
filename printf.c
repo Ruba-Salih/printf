@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * fill - Entry point
  * @ch: char
@@ -41,16 +43,21 @@ int switch_specifier(char specifier, va_list inf)
 			break;
 		case 's':
 			str = va_arg(inf, char *);
+			if (str == NULL)
+			{
+				string_null();
+				return (6);
+			}
 			count = handle_string(str);
 			break;
 		case '%':
 			count = handle_percentage();
 			break;
 		case 'd':
-			count = handle_integer(va_arg(inf, int));
+			count = handle_integer(inf);
 			break;
 		case 'i':
-			count = handle_integer(va_arg(inf, int));
+			count = handle_integer(inf);
 			break;
 	}
 
@@ -94,7 +101,7 @@ int _printf(const char *format, ...)
 	int flag = 0;
 	int count = 0;
 
-	if (format == NULL || (formait[i] == '%' && format[i + 1] == '\0'))
+	if (format == NULL || (format[i] == '%' && format[i + 1] == '\0'))
 		return (-1);
 
 	va_start(inf, format);

@@ -2,22 +2,21 @@
 
 /**
  * handle_char - Entry point
- * @inf: va_list
+ * @ch: va_list
  * Return: nothing
  */
-int handle_char(va_list inf)
+int handle_char(char ch)
 {
-	fill((char)(va_arg(inf, int)));
+	fill(ch);
 	return (1);
 }
 
 
 /**
  * string_null - Entry point
- * 
  * Return: nothing
  */
-int string_null()
+void string_null(void)
 {
 	int i;
 	char *str = "(null)";
@@ -27,29 +26,32 @@ int string_null()
 	{
 		fill(str[i]);
 	}
-
-	return (len);
 }
 
 
 
 /**
  * handle_string - Entry point
- * @inf: va_list
+ * @str: va_list
  * Return: nothing
  */
-int handle_string(va_list inf)
+int handle_string(char *str)
 {
-	char *str;
 	int len;
 
 	len = strlen(str);
-	str = va_arg(inf, char *);
 
-	if (str == NULL)
-		return;
+	if (len == 0)
+	{
+		return (-1);
+	}
+	else if (str == NULL)
+	{
+		string_null();
+		return (6);
+	}
 
-	while(*str)
+	while (*str)
 	{
 		fill(*str);
 		str++;
@@ -62,10 +64,10 @@ int handle_string(va_list inf)
 
 /**
  * handle_percentage - Entry point
- * @inf: va_list
+ *
  * Return: nothing
  */
-int handle_percentage(va_list inf)
+int handle_percentage(void)
 {
 	fill('%');
 	return (1);
