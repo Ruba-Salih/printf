@@ -45,6 +45,11 @@ int handle_string(char *str)
 	{
 		return (-1);
 	}
+	else if (str == NULL)
+	{
+		string_null();
+		return (6);
+	}
 
 	while (*str)
 	{
