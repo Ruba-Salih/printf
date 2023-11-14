@@ -24,10 +24,10 @@ int number_of_digits(int num)
  * @inf: va_list
  * Return: nothing
  */
-int handle_integer(va_list *inf)
+int handle_integer(va_list inf)
 {
 	long int num;
-       	len, i;
+	int len, i;
 	char *arr;
 
 	num = va_arg(inf, int);
