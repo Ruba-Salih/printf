@@ -43,6 +43,11 @@ int switch_specifier(char specifier, va_list inf)
 			break;
 		case 's':
 			str = va_arg(inf, char *);
+			if (str == NULL)
+			{
+				string_null();
+				return (6);
+			}
 			count = handle_string(str);
 			break;
 		case '%':
