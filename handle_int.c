@@ -26,7 +26,7 @@ int number_of_digits(int num)
  */
 int handle_integer(va_list inf)
 {
-	int num, len, i;
+	long int num, len, i;
 	char *arr;
 
 	num = va_arg(inf, int);
