@@ -13,8 +13,7 @@ int handle_char(char ch)
 
 
 /**
- * string_null - Entry point
- * 
+ * string_null - Entry point 
  * Return: nothing
  */
 void string_null(void)
@@ -48,7 +47,7 @@ int handle_string(char *str)
 		return (6);
 	}
 
-	while(*str)
+	while (*str)
 	{
 		fill(*str);
 		str++;
