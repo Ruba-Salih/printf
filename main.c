@@ -23,7 +23,7 @@ int main(void)
 	_printf("%i", 1);
 	printf("%i", 1);
 	_printf("%d", 0);
-	printf("%d", 0)
+	printf("%d", 0);
 	_printf("%d", 1);
 	printf("%d", 1);
 	_printf("iddi%diddiiddi\n", 1024);
