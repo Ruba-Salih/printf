@@ -13,7 +13,7 @@ int handle_char(char ch)
 
 
 /**
- * string_null - Entry point 
+ * string_null - Entry point
  * Return: nothing
  */
 void string_null(void)
