@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * handle_binary - prints pinary
+ * handle_binary - prints binary
  * @inf: list argument
  * Return: number of printed arguments
 */
@@ -13,6 +13,7 @@ int handle_binary(va_list inf)
 	b = va_arg(inf, unsigned int);
 	binary = b;
 	s = 0;
+	n = 0;
 	while (b / 2 != 0)
 	{
 		s++;

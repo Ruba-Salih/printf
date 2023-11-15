@@ -12,7 +12,9 @@
  */
 int main(void)
 {
-	_printf("");
+	long int l = UINT_MAX + 1024;
+
+	/*_printf("");
 	printf("\n");
 	_printf("There is %d bytes in %d kB\n", 1024, 1);
 	printf("There is %d bytes in %d kB\n", 1024, 1);
@@ -45,7 +47,12 @@ int main(void)
 	_printf("%i + %i = %i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
 	printf("%i + %i = %i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
 	_printf("%d", INT_MAX);
-	printf("%d", INT_MAX);
+	printf("%d", INT_MAX);*/
+	_printf("%b\n", 1024);
+	_printf("%b\n", -1024);
+	_printf("%b\n", 0);
+	_printf("%b\n", UINT_MAX);
+	_printf("%b\n", l);
 
 	return (0);
 }
