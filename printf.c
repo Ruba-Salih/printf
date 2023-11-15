@@ -62,6 +62,9 @@ int switch_specifier(char specifier, va_list inf)
 		case 'b':
 			count = handle_binary(inf);
 			break;
+		case 'n':
+                        count = handle_newline();
+                        break;
 	}
 
 	return (count);
@@ -76,7 +79,7 @@ int switch_specifier(char specifier, va_list inf)
  */
 int if_specifier(char ch, va_list inf)
 {
-	char *str = "csid%";
+	char *str = "csidn%";
 	int value = 0;
 
 	while (*str)
@@ -110,7 +113,7 @@ int _printf(const char *format, ...)
 	va_start(inf, format);
 	while (format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' || format[i] == '\\')
 		{
 			flag = if_specifier(format[i + 1], inf);
 			count += flag;
