@@ -6,13 +6,14 @@
 */
 int handle_binary(va_list inf)
 {
-	unsigned int b;
+	unsigned int b, a;
 	int s, i, binary, n;
 	int *ptr;
 
 	b = va_arg(inf, unsigned int);
+	a = 0;
 
-	if (b < 0)
+	if (b < a)
             b = -b;
 
 	binary = b;
