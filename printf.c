@@ -79,7 +79,7 @@ int switch_specifier(char specifier, va_list inf)
  */
 int if_specifier(char ch, va_list inf)
 {
-	char *str = "csidn%";
+	char *str = "csidbn%";
 	int value = 0;
 
 	while (*str)
