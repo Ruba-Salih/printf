@@ -42,10 +42,10 @@ int handle_binary(va_list inf)
 	{
 		return (0);
 	}
-	for (i = s; i >= 0; i--)
+	for (i = 0; i < s; i++)
 	{
-		binary /= 2;
 		ptr[i] = binary % 2;
+		 binary /= 2;
 	}
 	for (i = s - 1; i >= 0; i--)
 	{
