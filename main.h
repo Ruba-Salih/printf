@@ -22,5 +22,6 @@ int switch_specifier(char specifier, va_list inf);
 int if_specifier(char ch, va_list inf);
 int handle_binary(va_list inf);
 int handle_newline(void);
+int handle_address(va_list inf);
 
 #endif
