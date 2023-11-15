@@ -25,11 +25,12 @@ int handle_binary(va_list inf)
 	{
 		return (0);
 	}
-	for (i = s - 1; i >= 0; i--, binary /= 2)
+	for (i = s - 1; i >= 0; i--)
 	{
 		ptr[i] = binary % 2;
+		binary /= 2;
 	}
-	for (i = 0; i < s; i++)
+	for (i = s; i >= 0; i--)
 	{
 		fill(ptr[i] + '0');
 		n++;
