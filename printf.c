@@ -61,6 +61,7 @@ int switch_specifier(char specifier, va_list inf)
 			break;
 		case 'b':
 			count = handle_binary(inf);
+			break;
 	}
 
 	return (count);

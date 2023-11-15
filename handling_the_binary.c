@@ -19,7 +19,7 @@ int handle_binary(va_list inf)
 		s++;
 		b /= 2;
 	}
-	s++;
+
 	ptr = malloc(s * sizeof(int));
 	if (ptr == NULL)
 	{
