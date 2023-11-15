@@ -47,7 +47,7 @@ int handle_binary(va_list inf)
 		binary /= 2;
 		ptr[i] = binary % 2;
 	}
-	for (i = 0; i < s; i++)
+	for (i = s - 1; i >= 0; i--)
 	{
 		fill(ptr[i] + '0');
 		n++;
