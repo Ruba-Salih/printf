@@ -11,6 +11,10 @@ int handle_binary(va_list inf)
 	int *ptr;
 
 	b = va_arg(inf, unsigned int);
+
+	if (b < 0)
+            b = -b;
+
 	binary = b;
 	s = 0;
 	n = 0;
