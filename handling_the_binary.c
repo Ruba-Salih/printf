@@ -1,5 +1,40 @@
 #include "main.h"
 
+ /**
+ * handle_o - Entry point
+ * @inf: va_list
+ * Return: nothing
+ */
+ int handle_o(va_list inf)
+ {
+ 	unsigned int  num, temp;
+	int i, count, *arr;
+
+	num = va_arg(inf, unsigned int);
+	temp = num;
+	count = 0;
+	if (temp / 8 != 0)
+	{
+		temp /= 8;
+		count++;
+	}
+	count++;
+	arr = malloc(sizeof(int) * count);
+
+	for (i = 0; i < count; i++)
+	{
+		arr[i] = num % 8;
+		num /= 8;
+	}
+
+	for (i = count - 1; i >= 0; i--)
+	{
+		fill(arr[i] + '0');
+	}
+	free(arr);
+	return (count);
+ }
+
 
 /**
  * handle_newline - prints binary
