@@ -68,6 +68,9 @@ int switch_specifier(char specifier, va_list inf)
 		case 'p':
                         count = handle_address(inf);
                         break;
+		case 'o':
+                        count = handle_o(inf);
+                        break;
 	}
 
 	return (count);
@@ -82,7 +85,7 @@ int switch_specifier(char specifier, va_list inf)
  */
 int if_specifier(char ch, va_list inf)
 {
-	char *str = "csidpbn%";
+	char *str = "csidpbno%";
 	int value = 0;
 
 	while (*str)
